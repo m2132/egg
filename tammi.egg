@@ -1,0 +1,14 @@
+do(
+    @set(number, int(input())),
+    @set(sum, 0),
+
+    @while(
+        >(number, 0),
+        do(
+            @set(sum, +(sum, %(number, 10))),
+            @set(number, /(number, 10)),
+        )
+    ),
+    log(sum)
+)
+print('end')

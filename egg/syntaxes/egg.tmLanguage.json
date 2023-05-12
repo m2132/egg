@@ -1,0 +1,91 @@
+{
+    "name": "Egg",
+    "scopeName": "source.egg",
+    "fileTypes": [
+        "egg"
+    ],
+    "patterns": [
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#operators"
+        },
+        {
+            "include": "#function-call"
+        },
+        {
+            "include": "#names"
+        },
+        {
+            "include": "#punctuation"
+        },
+        {
+            "include": "#numbers"
+        },
+        {
+            "include": "#strings"
+        }
+    ],
+    "repository": {
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.egg",
+                    "match": "\\s(@if|@fun|@set|@while)\\b"
+                },
+                {
+                    "name": "constant.language.egg",
+                    "match": "\\b(true|false|nil)\\b"
+                }
+            ]
+        },
+        "names": {
+            "patterns": [
+                {
+                    "name": "entity.name.type.egg",
+                    "match": "\\b[a-zA-Z]\\b"
+                }
+            ]
+        },
+        "punctuation": {
+            "patterns": [
+                {
+                    "name": "punctuation.definition.group.begin.egg",
+                    "match": "\\("
+                },
+                {
+                    "name": "punctuation.definition.group.end.egg",
+                    "match": "\\)"
+                },
+                {
+                    "name": "punctuation.definition.separator.egg",
+                    "match": ","
+                }
+            ]
+        },
+        "numbers": {
+            "patterns": [
+                {
+                    "name": "constant.numeric.integer.egg",
+                    "match": "\\b(0|[1-9]\\d*)\\b"
+                }
+            ]
+        },
+        "strings": {
+            "patterns": [
+                {
+                    "name": "string.quoted.single.egg",
+                    "begin": "'",
+                    "end": "'",
+                    "patterns": [
+                        {
+                            "name": "constant.character.escape.egg",
+                            "match": "\\\\."
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

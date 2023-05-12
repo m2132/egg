@@ -1,0 +1,21 @@
+do(
+    log('Welcome to Columbus'),
+
+    @set(target, rand(0, 100)),
+    log('Enter your first guess: '),
+    @set(guess, int(input())),
+
+    @while(
+        !=(guess, target),
+        do(
+            @if(
+                >(guess, target),
+                log('Try smaller number'),
+                log('Try bigger number'),
+            ),
+            @set(guess, int(input()))
+        )
+    ),
+
+    log(+('Columbus! your guess is right, the number is ', str(guess))),
+)

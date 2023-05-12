@@ -1,0 +1,12 @@
+do(
+    @set(fib, @fun(n, do(
+        @if(
+            <(n, 2),
+            n,
+            +(fib(-(n, 1)), fib(-(n, 2))))
+    ))),
+
+    log('Enter a number: '),
+    @set(userNumber, int(input())),
+    log(+(+('The ', str(userNumber)), +('th number is Fibonacci series is: ', str(fib(userNumber)))))
+)
